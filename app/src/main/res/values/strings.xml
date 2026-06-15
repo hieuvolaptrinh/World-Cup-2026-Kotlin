@@ -3,4 +3,16 @@
     <string name="settings">Settings</string>
     <string name="library">Library</string>
     <string name="home">Home</string>
+    
+    <!-- World Cup -->
+    <string name="worldcup_home">Home</string>
+    <string name="worldcup_fixtures">Fixtures</string>
+    <string name="worldcup_standings">Standings</string>
+    <string name="worldcup_title">FIFA World Cup 2026</string>
+    <string name="scores_fixtures">Scores &amp; Fixtures</string>
+    <string name="group_standings">Group Standings</string>
+    <string name="last">Last</string>
+    <string name="next">Next</string>
+    <string name="match_finished">FT</string>
+    <string name="match_live">LIVE</string>
 </resources>
