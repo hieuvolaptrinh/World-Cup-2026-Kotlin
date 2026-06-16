@@ -3,7 +3,6 @@ package com.example.baseapp.data.local.converter
 import android.graphics.Matrix
 import android.net.Uri
 import androidx.room.TypeConverter
-import com.example.baseapp.data.local.entity.MatchStatus
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.util.Date
@@ -12,15 +11,7 @@ import kotlin.let
 class Converters {
     private val gson = Gson()
 
-    @TypeConverter
-    fun fromMatchStatus(status: MatchStatus): String {
-        return status.name
-    }
 
-    @TypeConverter
-    fun toMatchStatus(value: String): MatchStatus {
-        return MatchStatus.valueOf(value)
-    }
 
     @TypeConverter
     fun fromFloatArray(value: FloatArray): String {

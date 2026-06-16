@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 2,
-    "identityHash": "8ced4a2b0c6c91f3e14a5f382df2eaa9",
+    "identityHash": "002220862ebedff540dcecb19761799e",
     "entities": [
       {
         "tableName": "logins",
@@ -39,187 +39,11 @@
             "id"
           ]
         }
-      },
-      {
-        "tableName": "teams",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `flagUrl` TEXT NOT NULL, `groupName` TEXT, PRIMARY KEY(`id`))",
-        "fields": [
-          {
-            "fieldPath": "id",
-            "columnName": "id",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "name",
-            "columnName": "name",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "flagUrl",
-            "columnName": "flagUrl",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "groupName",
-            "columnName": "groupName",
-            "affinity": "TEXT"
-          }
-        ],
-        "primaryKey": {
-          "autoGenerate": false,
-          "columnNames": [
-            "id"
-          ]
-        }
-      },
-      {
-        "tableName": "matches",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `homeTeamId` TEXT NOT NULL, `awayTeamId` TEXT NOT NULL, `homeScore` INTEGER, `awayScore` INTEGER, `matchDateTime` INTEGER NOT NULL, `status` TEXT NOT NULL, `round` TEXT NOT NULL, `stadium` TEXT, PRIMARY KEY(`id`))",
-        "fields": [
-          {
-            "fieldPath": "id",
-            "columnName": "id",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "homeTeamId",
-            "columnName": "homeTeamId",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "awayTeamId",
-            "columnName": "awayTeamId",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "homeScore",
-            "columnName": "homeScore",
-            "affinity": "INTEGER"
-          },
-          {
-            "fieldPath": "awayScore",
-            "columnName": "awayScore",
-            "affinity": "INTEGER"
-          },
-          {
-            "fieldPath": "matchDateTime",
-            "columnName": "matchDateTime",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "status",
-            "columnName": "status",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "round",
-            "columnName": "round",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "stadium",
-            "columnName": "stadium",
-            "affinity": "TEXT"
-          }
-        ],
-        "primaryKey": {
-          "autoGenerate": false,
-          "columnNames": [
-            "id"
-          ]
-        }
-      },
-      {
-        "tableName": "standings",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `teamId` TEXT NOT NULL, `groupName` TEXT NOT NULL, `matchesPlayed` INTEGER NOT NULL, `wins` INTEGER NOT NULL, `draws` INTEGER NOT NULL, `losses` INTEGER NOT NULL, `goalsFor` INTEGER NOT NULL, `goalsAgainst` INTEGER NOT NULL, `points` INTEGER NOT NULL, `position` INTEGER NOT NULL)",
-        "fields": [
-          {
-            "fieldPath": "id",
-            "columnName": "id",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "teamId",
-            "columnName": "teamId",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "groupName",
-            "columnName": "groupName",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "matchesPlayed",
-            "columnName": "matchesPlayed",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "wins",
-            "columnName": "wins",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "draws",
-            "columnName": "draws",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "losses",
-            "columnName": "losses",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "goalsFor",
-            "columnName": "goalsFor",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "goalsAgainst",
-            "columnName": "goalsAgainst",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "points",
-            "columnName": "points",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "position",
-            "columnName": "position",
-            "affinity": "INTEGER",
-            "notNull": true
-          }
-        ],
-        "primaryKey": {
-          "autoGenerate": true,
-          "columnNames": [
-            "id"
-          ]
-        }
       }
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8ced4a2b0c6c91f3e14a5f382df2eaa9')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '002220862ebedff540dcecb19761799e')"
     ]
   }
 }

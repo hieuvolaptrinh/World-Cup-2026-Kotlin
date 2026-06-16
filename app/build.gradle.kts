@@ -1,4 +1,5 @@
 import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -6,7 +7,9 @@ plugins {
     alias(libs.plugins.hilt)
     id("kotlin-parcelize")
 }
-
+val properties = Properties().apply {
+    load(rootProject.file("local.properties").inputStream())
+}
 android {
     namespace = "com.example.baseapp"
     compileSdk = 36
@@ -20,9 +23,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        val properties = Properties().apply {
-            load(rootProject.file("local.properties").inputStream())
-        }
 
         buildConfigField(
             "String",

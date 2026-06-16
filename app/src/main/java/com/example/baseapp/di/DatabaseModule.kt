@@ -3,9 +3,6 @@ package com.example.baseapp.di
 import android.content.Context
 import androidx.room.Room
 import com.example.baseapp.data.local.dao.LoginPasswordDao
-import com.example.baseapp.data.local.dao.MatchDao
-import com.example.baseapp.data.local.dao.StandingDao
-import com.example.baseapp.data.local.dao.TeamDao
 import com.example.baseapp.data.local.database.AppDatabase
 import dagger.Module
 import dagger.Provides
@@ -30,23 +27,5 @@ object DatabaseModule {
     @Singleton
     fun provideLoginDao(database: AppDatabase): LoginPasswordDao {
         return database.loginDao()
-    }
-
-    @Provides
-    @Singleton
-    fun provideTeamDao(database: AppDatabase): TeamDao {
-        return database.teamDao()
-    }
-
-    @Provides
-    @Singleton
-    fun provideMatchDao(database: AppDatabase): MatchDao {
-        return database.matchDao()
-    }
-
-    @Provides
-    @Singleton
-    fun provideStandingDao(database: AppDatabase): StandingDao {
-        return database.standingDao()
     }
 }

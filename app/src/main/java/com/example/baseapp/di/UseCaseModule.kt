@@ -35,23 +35,15 @@ object UseCaseModule {
     @Provides
     fun provideWorldCupUseCases(
             getAllMatches: GetAllMatchesUseCase,
-            getMatchesByRound: GetMatchesByRoundUseCase,
-            getAllRounds: GetAllRoundsUseCase,
-            getStandingsByGroup: GetStandingsByGroupUseCase,
+            getMatchesByGroup: GetMatchesByGroupUseCase,
             getAllGroups: GetAllGroupsUseCase,
-            getAllStandings: GetAllStandingsUseCase,
-            getTeamById: GetTeamByIdUseCase,
-            initializeSampleData: InitializeSampleDataUseCase
+            getAllTeams: GetAllTeamsUseCase
     ): WorldCupUseCases {
         return WorldCupUseCases(
                 getAllMatches,
-                getMatchesByRound,
-                getAllRounds,
-                getStandingsByGroup,
+                getMatchesByGroup,
                 getAllGroups,
-                getAllStandings,
-                getTeamById,
-                initializeSampleData
+                getAllTeams
         )
     }
 }

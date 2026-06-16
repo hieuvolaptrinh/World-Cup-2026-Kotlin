@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TV Remote"
+rootProject.name = "World Cup"
 include(":app")
  

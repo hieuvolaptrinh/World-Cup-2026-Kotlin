@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">TV Remote</string>
-    <string name="settings">Settings</string>
-    <string name="library">Library</string>
+    <string name="app_name">World Cup</string>
+
+    <!-- Menu -->
     <string name="home">Home</string>
-    
+    <string name="library">Library</string>
+    <string name="settings">Settings</string>
+
     <!-- World Cup -->
     <string name="worldcup_home">Home</string>
     <string name="worldcup_fixtures">Fixtures</string>

@@ -4,11 +4,7 @@ import com.example.baseapp.domain.usecase.worldcup.*
 
 data class WorldCupUseCases(
         val getAllMatches: GetAllMatchesUseCase,
-        val getMatchesByRound: GetMatchesByRoundUseCase,
-        val getAllRounds: GetAllRoundsUseCase,
-        val getStandingsByGroup: GetStandingsByGroupUseCase,
+        val getMatchesByGroup: GetMatchesByGroupUseCase,
         val getAllGroups: GetAllGroupsUseCase,
-        val getAllStandings: GetAllStandingsUseCase,
-        val getTeamById: GetTeamByIdUseCase,
-        val initializeSampleData: InitializeSampleDataUseCase
+        val getAllTeams: GetAllTeamsUseCase
 )

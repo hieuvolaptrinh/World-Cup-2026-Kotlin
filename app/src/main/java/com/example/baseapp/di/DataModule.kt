@@ -1,8 +1,5 @@
 package com.example.baseapp.di
 
-import com.example.baseapp.data.local.dao.MatchDao
-import com.example.baseapp.data.local.dao.StandingDao
-import com.example.baseapp.data.local.dao.TeamDao
 import com.example.baseapp.data.remote.api.APICoin
 import com.example.baseapp.data.remote.datasource.CoinRemoteDataSource
 import com.example.baseapp.data.remote.datasource.CoinRemoteDataSourceImpl
@@ -35,10 +32,8 @@ object DataModule {
     @Provides
     @Singleton
     fun provideWorldCupRepository(
-            teamDao: TeamDao,
-            matchDao: MatchDao,
-            standingDao: StandingDao
+            api: com.example.baseapp.data.remote.api.APIWorldCup
     ): WorldCupRepository {
-        return WorldCupRepositoryImpl(teamDao, matchDao, standingDao)
+        return WorldCupRepositoryImpl(api)
     }
 }
