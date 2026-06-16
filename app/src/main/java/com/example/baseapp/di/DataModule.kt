@@ -1,12 +1,12 @@
-package com.example.baseapp.di
+package com.worldcup.app.di
 
-import com.example.baseapp.data.remote.api.APICoin
-import com.example.baseapp.data.remote.datasource.CoinRemoteDataSource
-import com.example.baseapp.data.remote.datasource.CoinRemoteDataSourceImpl
-import com.example.baseapp.data.repository.CoinRepositoryImpl
-import com.example.baseapp.data.repository.WorldCupRepositoryImpl
-import com.example.baseapp.domain.repository.CoinRepository
-import com.example.baseapp.domain.repository.WorldCupRepository
+import com.worldcup.app.data.remote.api.APICoin
+import com.worldcup.app.data.remote.datasource.CoinRemoteDataSource
+import com.worldcup.app.data.remote.datasource.CoinRemoteDataSourceImpl
+import com.worldcup.app.data.repository.CoinRepositoryImpl
+import com.worldcup.app.data.repository.WorldCupRepositoryImpl
+import com.worldcup.app.domain.repository.CoinRepository
+import com.worldcup.app.domain.repository.WorldCupRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -32,7 +32,7 @@ object DataModule {
     @Provides
     @Singleton
     fun provideWorldCupRepository(
-            api: com.example.baseapp.data.remote.api.APIWorldCup
+            api: com.worldcup.app.data.remote.api.APIWorldCup
     ): WorldCupRepository {
         return WorldCupRepositoryImpl(api)
     }

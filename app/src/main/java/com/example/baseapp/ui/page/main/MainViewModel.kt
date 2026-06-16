@@ -1,12 +1,12 @@
-package com.example.baseapp.ui.page.main
+package com.worldcup.app.ui.page.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.baseapp.data.remote.dto.MatchDto
-import com.example.baseapp.data.remote.dto.TeamInfoDto
-import com.example.baseapp.domain.repository.WorldCupRepository
-import com.example.baseapp.ui.model.MatchTodayUIModel
-import com.example.baseapp.utils.formatMatchDateTime
+import com.worldcup.app.data.remote.dto.MatchDto
+import com.worldcup.app.data.remote.dto.TeamInfoDto
+import com.worldcup.app.domain.repository.WorldCupRepository
+import com.worldcup.app.ui.model.MatchTodayUIModel
+import com.worldcup.app.utils.formatMatchDateTime
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

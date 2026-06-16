@@ -1,6 +1,6 @@
-package com.example.baseapp.domain.usecase.worldcup.container
+package com.worldcup.app.domain.usecase.worldcup.container
 
-import com.example.baseapp.domain.usecase.worldcup.*
+import com.worldcup.app.domain.usecase.worldcup.*
 
 data class WorldCupUseCases(
         val getAllMatches: GetAllMatchesUseCase,

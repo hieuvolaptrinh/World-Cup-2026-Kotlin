@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.base
+package com.worldcup.app.ui.base
 
 import android.content.Intent
 import android.graphics.Rect
@@ -16,8 +16,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.viewbinding.ViewBinding
-import com.example.baseapp.data.local.pref.Preference
-import com.example.baseapp.ui.component.loading.LoadingManager
+import com.worldcup.app.data.local.pref.Preference
+import com.worldcup.app.ui.component.loading.LoadingManager
 
 abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.page.fixtures.adapter
+package com.worldcup.app.ui.page.fixtures.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.baseapp.databinding.ItemMatchSectionBinding
-import com.example.baseapp.ui.model.MatchSectionUIModel
+import com.worldcup.app.databinding.ItemMatchSectionBinding
+import com.worldcup.app.ui.model.MatchSectionUIModel
 
 class MatchSectionAdapter :
         ListAdapter<MatchSectionUIModel, MatchSectionAdapter.ViewHolder>(DiffCallback()) {

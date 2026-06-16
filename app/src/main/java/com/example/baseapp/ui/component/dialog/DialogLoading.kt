@@ -1,9 +1,9 @@
-package com.example.baseapp.ui.component.dialog
+package com.worldcup.app.ui.component.dialog
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import com.example.baseapp.ui.base.BaseDialogFragment
-import com.example.baseapp.databinding.DialogLoadingBinding
+import com.worldcup.app.ui.base.BaseDialogFragment
+import com.worldcup.app.databinding.DialogLoadingBinding
 
 class DialogLoading : BaseDialogFragment<DialogLoadingBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {

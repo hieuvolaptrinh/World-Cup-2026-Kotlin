@@ -1,8 +1,8 @@
-package com.example.baseapp.domain.repository
+package com.worldcup.app.domain.repository
 
-import com.example.baseapp.data.remote.dto.GroupDto
-import com.example.baseapp.data.remote.dto.MatchDto
-import com.example.baseapp.data.remote.dto.TeamInfoDto
+import com.worldcup.app.data.remote.dto.GroupDto
+import com.worldcup.app.data.remote.dto.MatchDto
+import com.worldcup.app.data.remote.dto.TeamInfoDto
 
 interface WorldCupRepository {
     suspend fun getAllMatches(): List<MatchDto>

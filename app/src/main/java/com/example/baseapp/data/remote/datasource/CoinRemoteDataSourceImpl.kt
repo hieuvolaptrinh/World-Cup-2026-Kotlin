@@ -1,8 +1,8 @@
-package com.example.baseapp.data.remote.datasource
+package com.worldcup.app.data.remote.datasource
 
-import com.example.baseapp.data.remote.api.APICoin
-import com.example.baseapp.data.remote.apiCall
-import com.example.baseapp.data.remote.dto.IdentifyRequest
+import com.worldcup.app.data.remote.api.APICoin
+import com.worldcup.app.data.remote.apiCall
+import com.worldcup.app.data.remote.dto.IdentifyRequest
 
 class CoinRemoteDataSourceImpl(
     private val api: APICoin

@@ -1,6 +1,6 @@
-package com.example.baseapp.data.remote.datasource
+package com.worldcup.app.data.remote.datasource
 
-import com.example.baseapp.data.remote.api.APIWorldCup
+import com.worldcup.app.data.remote.api.APIWorldCup
 
 class WorldCupRemoteDataSourceImpl(
     private val api: APIWorldCup

@@ -1,8 +1,8 @@
-package com.example.baseapp.data.repository
+package com.worldcup.app.data.repository
 
-import com.example.baseapp.data.local.dao.LoginPasswordDao
-import com.example.baseapp.data.local.entity.LoginPassword
-import com.example.baseapp.domain.repository.LoginRepository
+import com.worldcup.app.data.local.dao.LoginPasswordDao
+import com.worldcup.app.data.local.entity.LoginPassword
+import com.worldcup.app.domain.repository.LoginRepository
 import javax.inject.Inject
 
 class LoginRepositoryImpl @Inject constructor(

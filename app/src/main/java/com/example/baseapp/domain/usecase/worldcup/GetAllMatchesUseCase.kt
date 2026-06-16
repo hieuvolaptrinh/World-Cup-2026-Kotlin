@@ -1,7 +1,7 @@
-package com.example.baseapp.domain.usecase.worldcup
+package com.worldcup.app.domain.usecase.worldcup
 
-import com.example.baseapp.data.remote.dto.MatchDto
-import com.example.baseapp.domain.repository.WorldCupRepository
+import com.worldcup.app.data.remote.dto.MatchDto
+import com.worldcup.app.domain.repository.WorldCupRepository
 import javax.inject.Inject
 
 class GetAllMatchesUseCase @Inject constructor(

@@ -1,9 +1,9 @@
-package com.example.baseapp.data.local.pref
+package com.worldcup.app.data.local.pref
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.baseapp.Constants
+import com.worldcup.app.Constants
 
 object PreferenceManager {
     private const val PREFERENCE_NAME = "retake_image_app_preference"

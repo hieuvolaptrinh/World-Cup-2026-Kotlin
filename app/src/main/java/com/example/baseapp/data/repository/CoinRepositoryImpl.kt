@@ -1,8 +1,8 @@
-package com.example.baseapp.data.repository
+package com.worldcup.app.data.repository
 
-import com.example.baseapp.data.remote.datasource.CoinRemoteDataSource
-import com.example.baseapp.data.remote.dto.IdentifyRequest
-import com.example.baseapp.domain.repository.CoinRepository
+import com.worldcup.app.data.remote.datasource.CoinRemoteDataSource
+import com.worldcup.app.data.remote.dto.IdentifyRequest
+import com.worldcup.app.domain.repository.CoinRepository
 
 class CoinRepositoryImpl(
     private val remote: CoinRemoteDataSource

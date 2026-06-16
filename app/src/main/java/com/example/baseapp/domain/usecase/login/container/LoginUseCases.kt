@@ -1,7 +1,7 @@
-package com.example.baseapp.domain.usecase.login.container
+package com.worldcup.app.domain.usecase.login.container
 
-import com.example.baseapp.domain.usecase.login.GetAllLoginsUseCase
-import com.example.baseapp.domain.usecase.login.GetLoginByNameUseCase
+import com.worldcup.app.domain.usecase.login.GetAllLoginsUseCase
+import com.worldcup.app.domain.usecase.login.GetLoginByNameUseCase
 
 data class LoginUseCases(
     val getAll: GetAllLoginsUseCase,

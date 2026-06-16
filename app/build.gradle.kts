@@ -11,11 +11,11 @@ val properties = Properties().apply {
     load(rootProject.file("local.properties").inputStream())
 }
 android {
-    namespace = "com.example.baseapp"
+    namespace = "com.worldcup.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.baseapp"
+        applicationId = "com.worldcup.app"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -59,6 +59,7 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -97,6 +98,10 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.fragment)
+
+//    worker
+    implementation(libs.androidx.work.runtime.ktx)
+
 }
 
 ksp {

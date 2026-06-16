@@ -1,4 +1,10 @@
-package com.example.baseapp.ui.model
+package com.worldcup.app.ui.model
+
+import com.worldcup.app.data.local.entity.WorldCupMatchEntity
+import com.worldcup.app.utils.toDisplayTime
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 data class MatchUIModel(
         val id: String,
@@ -31,3 +37,21 @@ data class MatchTodayUIModel(
         val status: String, // "FT", "LIVE", "SCHEDULED"
         val round: String?
 )
+
+fun WorldCupMatchEntity.toUIModel(): MatchUIModel {
+        val isFinished = homeScore != null && awayScore != null
+
+        return MatchUIModel(
+                id = id,
+                homeTeamName = homeTeamName,
+                homeTeamFlag = homeTeamFlag,
+                awayTeamName = awayTeamName,
+                awayTeamFlag = awayTeamFlag,
+                homeScore = homeScore?.toString() ?: "-",
+                awayScore = awayScore?.toString() ?: "-",
+                matchDate = localMatchDate ?: date,
+                matchTime = kickoffMillis?.toDisplayTime() ?: (time ?: ""),
+                status = if (isFinished) "FT" else "SCHEDULED",
+                stadium = stadium
+        )
+}

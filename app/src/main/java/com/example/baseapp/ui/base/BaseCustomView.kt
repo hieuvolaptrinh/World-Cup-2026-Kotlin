@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.base
+package com.worldcup.app.ui.base
 
 import android.content.Context
 import android.util.AttributeSet

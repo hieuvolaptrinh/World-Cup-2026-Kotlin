@@ -1,7 +1,7 @@
-package com.example.baseapp.di
+package com.worldcup.app.di
 
-import com.example.baseapp.BuildConfig
-import com.example.baseapp.data.remote.api.APICoin
+import com.worldcup.app.BuildConfig
+import com.worldcup.app.data.remote.api.APICoin
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -52,7 +52,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideAPIWorldCup(retrofit: Retrofit): com.example.baseapp.data.remote.api.APIWorldCup {
-        return retrofit.create(com.example.baseapp.data.remote.api.APIWorldCup::class.java)
+    fun provideAPIWorldCup(retrofit: Retrofit): com.worldcup.app.data.remote.api.APIWorldCup {
+        return retrofit.create(com.worldcup.app.data.remote.api.APIWorldCup::class.java)
     }
 }

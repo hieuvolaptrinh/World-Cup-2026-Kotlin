@@ -1,4 +1,4 @@
-package com.example.baseapp.utils
+package com.worldcup.app.utils
 
 import android.content.Context
 import android.util.DisplayMetrics

@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.page.standings.adapter
+package com.worldcup.app.ui.page.standings.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.baseapp.databinding.ItemStandingBinding
-import com.example.baseapp.ui.page.standings.StandingUiModel
+import com.worldcup.app.databinding.ItemStandingBinding
+import com.worldcup.app.ui.page.standings.StandingUiModel
 
 class StandingSimpleAdapter :
         ListAdapter<StandingUiModel, StandingSimpleAdapter.ViewHolder>(DiffCallback()) {

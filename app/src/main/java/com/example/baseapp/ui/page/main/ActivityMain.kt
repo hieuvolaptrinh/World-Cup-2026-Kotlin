@@ -1,15 +1,15 @@
-package com.example.baseapp.ui.page.main
+package com.worldcup.app.ui.page.main
 
 import android.content.Intent
 import android.view.LayoutInflater
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.baseapp.databinding.ActivityMainBinding
-import com.example.baseapp.ui.base.BaseActivity
-import com.example.baseapp.ui.page.fixtures.ActivityScoresFixtures
-import com.example.baseapp.ui.page.main.adapter.ScoreFixturesTodayAdapter
-import com.example.baseapp.ui.page.standings.ActivityStandings
+import com.worldcup.app.databinding.ActivityMainBinding
+import com.worldcup.app.ui.base.BaseActivity
+import com.worldcup.app.ui.page.fixtures.ActivityScoresFixtures
+import com.worldcup.app.ui.page.main.adapter.ScoreFixturesTodayAdapter
+import com.worldcup.app.ui.page.standings.ActivityStandings
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

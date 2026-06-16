@@ -1,7 +1,7 @@
-package com.example.baseapp.domain.usecase.login
+package com.worldcup.app.domain.usecase.login
 
-import com.example.baseapp.data.local.entity.LoginPassword
-import com.example.baseapp.domain.repository.LoginRepository
+import com.worldcup.app.data.local.entity.LoginPassword
+import com.worldcup.app.domain.repository.LoginRepository
 import javax.inject.Inject
 
 class GetAllLoginsUseCase @Inject constructor(

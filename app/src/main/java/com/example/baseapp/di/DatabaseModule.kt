@@ -1,9 +1,9 @@
-package com.example.baseapp.di
+package com.worldcup.app.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.baseapp.data.local.dao.LoginPasswordDao
-import com.example.baseapp.data.local.database.AppDatabase
+import com.worldcup.app.data.local.dao.LoginPasswordDao
+import com.worldcup.app.data.local.database.AppDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

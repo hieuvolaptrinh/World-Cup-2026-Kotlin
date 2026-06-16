@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.base
+package com.worldcup.app.ui.base
 
 import android.app.Dialog
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.fragment.app.FragmentManager
 import androidx.viewbinding.ViewBinding
-import com.example.baseapp.R
+import com.worldcup.app.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment

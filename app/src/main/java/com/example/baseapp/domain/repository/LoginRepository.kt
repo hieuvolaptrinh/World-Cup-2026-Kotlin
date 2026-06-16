@@ -1,6 +1,6 @@
-package com.example.baseapp.domain.repository
+package com.worldcup.app.domain.repository
 
-import com.example.baseapp.data.local.entity.LoginPassword
+import com.worldcup.app.data.local.entity.LoginPassword
 
 interface LoginRepository {
 

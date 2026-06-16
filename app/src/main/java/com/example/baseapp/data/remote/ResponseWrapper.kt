@@ -1,6 +1,6 @@
-package com.example.baseapp.data.remote
+package com.worldcup.app.data.remote
 
-import com.example.baseapp.utils.LogUtils
+import com.worldcup.app.utils.LogUtils
 import retrofit2.Response
 
 const val TAG = "API Request"

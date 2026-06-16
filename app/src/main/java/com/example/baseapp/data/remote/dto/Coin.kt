@@ -1,4 +1,4 @@
-package com.example.baseapp.data.remote.dto
+package com.worldcup.app.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 

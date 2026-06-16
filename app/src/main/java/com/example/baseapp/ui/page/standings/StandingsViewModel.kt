@@ -1,9 +1,9 @@
-package com.example.baseapp.ui.page.standings
+package com.worldcup.app.ui.page.standings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.baseapp.data.remote.dto.GroupDto
-import com.example.baseapp.domain.repository.WorldCupRepository
+import com.worldcup.app.data.remote.dto.GroupDto
+import com.worldcup.app.domain.repository.WorldCupRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -1,4 +1,4 @@
-package com.example.baseapp
+package com.worldcup.app
 
 object Constants {
     const val ITEM_POSITION_FIRST = 1
@@ -9,5 +9,9 @@ object Constants {
     const val ONBOARDING_SCREEN_POSITION = 1
     const val MAIN_SCREEN = 2
 
-    const val APP_LINK = "https://play.google.com/store/apps/details?id=com.authenticatorapp.authenticator2fa.pub"
+
+    const val ACTION_PINNED = "com.worldcup.app.ACTION_PINNED"
+
+    const val APP_LINK =
+        "https://play.google.com/store/apps/details?id=com.authenticatorapp.authenticator2fa.pub"
 }

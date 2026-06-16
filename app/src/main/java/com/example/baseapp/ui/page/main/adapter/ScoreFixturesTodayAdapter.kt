@@ -1,11 +1,11 @@
-package com.example.baseapp.ui.page.main.adapter
+package com.worldcup.app.ui.page.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.baseapp.databinding.ItemMatchTodayBinding
-import com.example.baseapp.ui.model.MatchTodayUIModel
-import com.example.baseapp.utils.decodeUnicodeFlag
+import com.worldcup.app.databinding.ItemMatchTodayBinding
+import com.worldcup.app.ui.model.MatchTodayUIModel
+import com.worldcup.app.utils.decodeUnicodeFlag
 
 class ScoreFixturesTodayAdapter :
         RecyclerView.Adapter<ScoreFixturesTodayAdapter.ScoreFixturesHolder>() {

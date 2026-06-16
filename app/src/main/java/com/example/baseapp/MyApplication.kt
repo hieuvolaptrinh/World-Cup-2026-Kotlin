@@ -1,4 +1,4 @@
-package com.example.baseapp
+package com.worldcup.app
 
 import android.app.Activity
 import android.app.Application
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.example.baseapp.data.local.pref.Preference
-import com.example.baseapp.data.local.pref.PreferenceManager
+import com.worldcup.app.data.local.pref.Preference
+import com.worldcup.app.data.local.pref.PreferenceManager
 import dagger.hilt.android.HiltAndroidApp
 import java.io.File
 import java.lang.ref.WeakReference

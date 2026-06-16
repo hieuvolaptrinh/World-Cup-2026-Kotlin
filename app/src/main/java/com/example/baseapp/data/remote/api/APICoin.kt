@@ -1,7 +1,7 @@
-package com.example.baseapp.data.remote.api
+package com.worldcup.app.data.remote.api
 
-import com.example.baseapp.data.remote.dto.Coin
-import com.example.baseapp.data.remote.dto.IdentifyRequest
+import com.worldcup.app.data.remote.dto.Coin
+import com.worldcup.app.data.remote.dto.IdentifyRequest
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET

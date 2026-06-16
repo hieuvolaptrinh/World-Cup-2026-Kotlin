@@ -1,10 +1,10 @@
-package com.example.baseapp.data.repository
+package com.worldcup.app.data.repository
 
-import com.example.baseapp.data.remote.api.APIWorldCup
-import com.example.baseapp.data.remote.dto.GroupDto
-import com.example.baseapp.data.remote.dto.MatchDto
-import com.example.baseapp.data.remote.dto.TeamInfoDto
-import com.example.baseapp.domain.repository.WorldCupRepository
+import com.worldcup.app.data.remote.api.APIWorldCup
+import com.worldcup.app.data.remote.dto.GroupDto
+import com.worldcup.app.data.remote.dto.MatchDto
+import com.worldcup.app.data.remote.dto.TeamInfoDto
+import com.worldcup.app.domain.repository.WorldCupRepository
 import javax.inject.Inject
 
 class WorldCupRepositoryImpl @Inject constructor(private val api: APIWorldCup) :

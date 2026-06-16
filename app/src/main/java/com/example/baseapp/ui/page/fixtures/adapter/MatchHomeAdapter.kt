@@ -1,13 +1,13 @@
-package com.example.baseapp.ui.page.fixtures.adapter
+package com.worldcup.app.ui.page.fixtures.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.baseapp.databinding.ItemMatchBinding
-import com.example.baseapp.ui.model.MatchUIModel
-import com.example.baseapp.utils.decodeUnicodeFlag
+import com.worldcup.app.databinding.ItemMatchBinding
+import com.worldcup.app.ui.model.MatchUIModel
+import com.worldcup.app.utils.decodeUnicodeFlag
 
 class MatchHomeAdapter : ListAdapter<MatchUIModel, MatchHomeAdapter.ViewHolder>(DiffCallback()) {
 

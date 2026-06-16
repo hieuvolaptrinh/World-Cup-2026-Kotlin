@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.page.fixtures
+package com.worldcup.app.ui.page.fixtures
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -7,10 +7,10 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.baseapp.databinding.ActivityScoresFixturesBinding
+import com.worldcup.app.databinding.ActivityScoresFixturesBinding
 
-import com.example.baseapp.ui.base.BaseActivity
-import com.example.baseapp.ui.page.fixtures.adapter.MatchSectionAdapter
+import com.worldcup.app.ui.base.BaseActivity
+import com.worldcup.app.ui.page.fixtures.adapter.MatchSectionAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

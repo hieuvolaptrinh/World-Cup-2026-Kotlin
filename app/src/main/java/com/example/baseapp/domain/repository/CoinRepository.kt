@@ -1,8 +1,8 @@
-package com.example.baseapp.domain.repository
+package com.worldcup.app.domain.repository
 
-import com.example.baseapp.data.remote.Resource
-import com.example.baseapp.data.remote.dto.Coin
-import com.example.baseapp.data.remote.dto.IdentifyRequest
+import com.worldcup.app.data.remote.Resource
+import com.worldcup.app.data.remote.dto.Coin
+import com.worldcup.app.data.remote.dto.IdentifyRequest
 
 interface CoinRepository {
 

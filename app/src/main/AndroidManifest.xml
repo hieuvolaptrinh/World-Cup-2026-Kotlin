@@ -14,18 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ListenAI"
         android:usesCleartextTraffic="true">
-
-
         <activity
             android:name=".ui.page.main.ActivityMain"
             android:exported="true"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:screenOrientation="portrait"></activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".ui.page.fixtures.ActivityScoresFixtures"
             android:exported="false"
@@ -34,6 +27,27 @@
             android:name=".ui.page.standings.ActivityStandings"
             android:exported="false"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.page.world_cup_widget.ActivityWorldCupWidget"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--        widget world cup -->
+        <receiver
+            android:name=".ui.widget.WorldCupWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_world_cup_widget_info" />
+        </receiver>
     </application>
 
 </manifest>

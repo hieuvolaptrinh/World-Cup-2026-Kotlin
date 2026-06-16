@@ -1,4 +1,4 @@
-package com.example.baseapp
+package com.worldcup.app
 
 import org.junit.Test
 

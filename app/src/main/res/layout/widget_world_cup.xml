@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/img_bg_widget_world_cup"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tvPrevious"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="&lt;"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:text=">"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Group Stage - Round 1" />
+
+    <TextView
+        android:id="@+id/tvTimeStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        tools:text="06/16 02:00" />
+
+    <TextView
+        android:id="@+id/tvHomeFlag"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tvTimeStart"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        tools:text="🇲🇽" />
+
+    <TextView
+        android:id="@+id/tvAwayFlag"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvTimeStart"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        tools:text="🇿🇦" />
+
+    <TextView
+        android:id="@+id/tvScoreOrVs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTimeStart"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        tools:text="2-1" />
+
+    <TextView
+        android:id="@+id/tvHomeTeamName"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        tools:text="Mexico" />
+
+    <TextView
+        android:id="@+id/tvAwayTeamName"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        tools:text="South Africa" />
+</RelativeLayout>

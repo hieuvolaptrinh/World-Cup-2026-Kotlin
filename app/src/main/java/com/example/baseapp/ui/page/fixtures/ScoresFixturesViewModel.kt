@@ -1,13 +1,15 @@
-package com.example.baseapp.ui.page.fixtures
+package com.worldcup.app.ui.page.fixtures
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.baseapp.data.remote.dto.MatchDto
-import com.example.baseapp.data.remote.dto.TeamInfoDto
-import com.example.baseapp.domain.repository.WorldCupRepository
-import com.example.baseapp.ui.model.MatchUIModel
-import com.example.baseapp.ui.model.MatchSectionUIModel
-import com.example.baseapp.utils.formatMatchDateTime
+import com.worldcup.app.ui.model.sectionTitle
+import com.worldcup.app.ui.model.toMatchUIModel
+import com.worldcup.app.data.remote.dto.MatchDto
+import com.worldcup.app.data.remote.dto.TeamInfoDto
+import com.worldcup.app.domain.repository.WorldCupRepository
+import com.worldcup.app.ui.model.MatchUIModel
+import com.worldcup.app.ui.model.MatchSectionUIModel
+import com.worldcup.app.utils.formatMatchDateTime
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -84,47 +86,8 @@ class ScoresFixturesViewModel @Inject constructor(private val repository: WorldC
 
 
 
-    private fun List<TeamInfoDto>.findTeam(value: String): TeamInfoDto? {
-        return firstOrNull {
-            it.fifaCode.equals(value, ignoreCase = true) ||
-                    it.name.equals(value, ignoreCase = true) ||
-                    it.nameNormalised.equals(value, ignoreCase = true)
-        }
-    }
-    private fun MatchDto.toMatchUIModel(teams: List<TeamInfoDto>): MatchUIModel {
-        val homeTeam = teams.findTeam(team1)
-        val awayTeam = teams.findTeam(team2)
-        val localDateTime = formatMatchDateTime(date, time)
 
-        return MatchUIModel(
-            id = num?.toString() ?: "$date-$time-$team1-$team2",
-            homeTeamName = homeTeam?.name ?: team1,
-            homeTeamFlag = homeTeam?.flagUnicode ?: "",
-            awayTeamName = awayTeam?.name ?: team2,
-            awayTeamFlag = awayTeam?.flagUnicode ?: "",
-            homeScore = score?.ft?.getOrNull(0)?.toString() ?: "-",
-            awayScore = score?.ft?.getOrNull(1)?.toString() ?: "-",
-            matchDate = localDateTime.displayDate,
-            matchTime = localDateTime.displayTime,
-            status = if (score != null) "FT" else "SCHEDULED",
-            stadium = null
-        )
-    }
-    private fun MatchDto.sectionTitle(): String {
-        if (group != null && round.startsWith("Matchday", ignoreCase = true)) {
-            return "Group Stage - Round ${groupStageRound()}"
-        }
-        return round
-    }
 
-    private fun MatchDto.groupStageRound(): Int {
-        val matchday = round.substringAfter("Matchday", "").trim().toIntOrNull() ?: return 1
-        return when (matchday) {
-            in 1..7 -> 1
-            in 8..13 -> 2
-            else -> 3
-        }
-    }
 
     private fun sectionOrder(title: String): Int {
         return when (title) {

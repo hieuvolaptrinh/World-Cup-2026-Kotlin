@@ -1,4 +1,4 @@
-package com.example.baseapp.data.local.pref
+package com.worldcup.app.data.local.pref
 
 import android.content.SharedPreferences
 import androidx.core.content.edit

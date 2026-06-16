@@ -1,10 +1,10 @@
-package com.example.baseapp.data.remote.api
+package com.worldcup.app.data.remote.api
 
-import com.example.baseapp.data.remote.dto.SquadResponse
-import com.example.baseapp.data.remote.dto.StadiumsResponse
-import com.example.baseapp.data.remote.dto.TeamInfoDto
-import com.example.baseapp.data.remote.dto.WorldCupGroupsResponse
-import com.example.baseapp.data.remote.dto.WorldCupMatchesResponse
+import com.worldcup.app.data.remote.dto.SquadResponse
+import com.worldcup.app.data.remote.dto.StadiumsResponse
+import com.worldcup.app.data.remote.dto.TeamInfoDto
+import com.worldcup.app.data.remote.dto.WorldCupGroupsResponse
+import com.worldcup.app.data.remote.dto.WorldCupMatchesResponse
 import retrofit2.Response
 import retrofit2.http.GET
 

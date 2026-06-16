@@ -1,13 +1,13 @@
-package com.example.baseapp.di
+package com.worldcup.app.di
 
-import com.example.baseapp.domain.usecase.coin.GetCoinByIdUseCase
-import com.example.baseapp.domain.usecase.coin.GetTop20CoinUseCase
-import com.example.baseapp.domain.usecase.coin.container.CoinUseCases
-import com.example.baseapp.domain.usecase.login.GetAllLoginsUseCase
-import com.example.baseapp.domain.usecase.login.GetLoginByNameUseCase
-import com.example.baseapp.domain.usecase.login.container.LoginUseCases
-import com.example.baseapp.domain.usecase.worldcup.*
-import com.example.baseapp.domain.usecase.worldcup.container.WorldCupUseCases
+import com.worldcup.app.domain.usecase.coin.GetCoinByIdUseCase
+import com.worldcup.app.domain.usecase.coin.GetTop20CoinUseCase
+import com.worldcup.app.domain.usecase.coin.container.CoinUseCases
+import com.worldcup.app.domain.usecase.login.GetAllLoginsUseCase
+import com.worldcup.app.domain.usecase.login.GetLoginByNameUseCase
+import com.worldcup.app.domain.usecase.login.container.LoginUseCases
+import com.worldcup.app.domain.usecase.worldcup.*
+import com.worldcup.app.domain.usecase.worldcup.container.WorldCupUseCases
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

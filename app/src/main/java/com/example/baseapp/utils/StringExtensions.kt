@@ -1,4 +1,4 @@
-package com.example.baseapp.utils
+package com.worldcup.app.utils
 
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -32,7 +32,8 @@ fun String.decodeUnicodeFlag(): String {
 fun formatMatchDateTime(date: String, time: String): LocalMatchDateTime {
     return try {
         val sourceDate = LocalDate.parse(date, DateTimeFormatter.ISO_LOCAL_DATE)
-        val sourceTime = LocalTime.parse(time.substringBefore(" "), DateTimeFormatter.ofPattern("H:mm"))
+        val sourceTime =
+            LocalTime.parse(time.substringBefore(" "), DateTimeFormatter.ofPattern("H:mm"))
         val sourceOffset = parseUtcOffset(time.substringAfter("UTC", "UTC+0").trim())
         val localDateTime =
             OffsetDateTime
@@ -41,8 +42,18 @@ fun formatMatchDateTime(date: String, time: String): LocalMatchDateTime {
 
         LocalMatchDateTime(
             date = localDateTime.toLocalDate(),
-            displayDate = localDateTime.format(DateTimeFormatter.ofPattern("MM/dd", Locale.getDefault())),
-            displayTime = localDateTime.format(DateTimeFormatter.ofPattern("HH:mm", Locale.getDefault()))
+            displayDate = localDateTime.format(
+                DateTimeFormatter.ofPattern(
+                    "MM/dd",
+                    Locale.getDefault()
+                )
+            ),
+            displayTime = localDateTime.format(
+                DateTimeFormatter.ofPattern(
+                    "HH:mm",
+                    Locale.getDefault()
+                )
+            )
         )
     } catch (e: Exception) {
         LocalMatchDateTime(
@@ -53,7 +64,7 @@ fun formatMatchDateTime(date: String, time: String): LocalMatchDateTime {
     }
 }
 
-private fun parseUtcOffset(offsetText: String): ZoneOffset {
+fun parseUtcOffset(offsetText: String): ZoneOffset {
     val normalized = offsetText.ifBlank { "+0" }
     val sign = if (normalized.startsWith("-")) "-" else "+"
     val rawHours = normalized.removePrefix("+").removePrefix("-")

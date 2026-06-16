@@ -1,8 +1,8 @@
-package com.example.baseapp.utils
+package com.worldcup.app.utils
 
 import android.util.Log
-import com.example.baseapp.BuildConfig
-import com.example.baseapp.MyApplication
+import com.worldcup.app.BuildConfig
+import com.worldcup.app.MyApplication
 import java.io.File
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat

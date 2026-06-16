@@ -1,7 +1,7 @@
-package com.example.baseapp.ui.component.loading
+package com.worldcup.app.ui.component.loading
 
 import androidx.appcompat.app.AppCompatActivity
-import com.example.baseapp.ui.component.dialog.DialogLoading
+import com.worldcup.app.ui.component.dialog.DialogLoading
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
