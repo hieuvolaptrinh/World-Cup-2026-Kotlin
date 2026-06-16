@@ -7,21 +7,32 @@ import com.worldcup.app.data.remote.dto.WorldCupGroupsResponse
 import com.worldcup.app.data.remote.dto.WorldCupMatchesResponse
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface APIWorldCup {
 
     @GET("worldcup.json")
-    suspend fun getAllMatches(): Response<WorldCupMatchesResponse>
+    suspend fun getAllMatches(
+        @Query("_") noCache: Long = System.currentTimeMillis()
+    ): Response<WorldCupMatchesResponse>
 
     @GET("worldcup.groups.json")
-    suspend fun getGroups(): Response<WorldCupGroupsResponse>
+    suspend fun getGroups(
+        @Query("_") noCache: Long = System.currentTimeMillis()
+    ): Response<WorldCupGroupsResponse>
 
     @GET("worldcup.squads.json")
-    suspend fun getSquads(): Response<List<SquadResponse>>
+    suspend fun getSquads(
+        @Query("_") noCache: Long = System.currentTimeMillis()
+    ): Response<List<SquadResponse>>
 
     @GET("worldcup.stadiums.json")
-    suspend fun getStadiums(): Response<StadiumsResponse>
+    suspend fun getStadiums(
+        @Query("_") noCache: Long = System.currentTimeMillis()
+    ): Response<StadiumsResponse>
 
     @GET("worldcup.teams.json")
-    suspend fun getTeams(): Response<List<TeamInfoDto>>
+    suspend fun getTeams(
+        @Query("_") noCache: Long = System.currentTimeMillis()
+    ): Response<List<TeamInfoDto>>
 }
