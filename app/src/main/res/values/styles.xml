@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--   Typography -->
-    <style name="headline_sb">
-        <item name="fontFamily">@font/inter_semi_bold</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:letterSpacing">0</item>
-    </style>
-
     <style name="headline_small_sb">
         <item name="fontFamily">@font/inter_semi_bold</item>
         <item name="android:textSize">20sp</item>

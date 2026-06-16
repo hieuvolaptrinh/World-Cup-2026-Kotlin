@@ -1,127 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="12dp"
-    android:gravity="center_vertical">
+    android:background="#FFFFFF"
+    android:layout_marginBottom="1dp">
 
-    <!-- Position Indicator -->
-    <View
-        android:id="@+id/viewPositionIndicator"
-        android:layout_width="4dp"
-        android:layout_height="match_parent"
-        android:background="#EC6613"
-        android:layout_marginEnd="8dp" />
-
-    <!-- Position Number -->
     <TextView
         android:id="@+id/tvPosition"
-        android:layout_width="30dp"
+        android:layout_width="32dp"
         android:layout_height="wrap_content"
-        android:text="1"
-        android:textColor="#000000"
         android:textSize="14sp"
+        android:textColor="#000000"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        tools:text="1" />
 
-    <!-- Team Flag and Name -->
     <ImageView
-        android:id="@+id/ivFlag"
+        android:id="@+id/ivTeamFlag"
         android:layout_width="24dp"
         android:layout_height="16dp"
+        android:layout_marginStart="8dp"
         android:scaleType="fitCenter"
-        android:layout_marginEnd="8dp" />
+        tools:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/tvTeamName"
         android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:text="Netherlands"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
         android:textColor="#000000"
-        android:textSize="14sp" />
-
-    <!-- Statistics -->
-    <TextView
-        android:id="@+id/tvMatchesPlayed"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:gravity="center"
-        android:text="1"
-        android:textColor="#000000"
-        android:textSize="12sp" />
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="Qatar" />
 
     <TextView
-        android:id="@+id/tvWins"
-        android:layout_width="0dp"
+        android:id="@+id/tvPlayed"
+        android:layout_width="32dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:gravity="center"
-        android:text="1"
+        android:textSize="14sp"
         android:textColor="#000000"
-        android:textSize="12sp" />
+        android:gravity="center"
+        tools:text="3" />
 
     <TextView
-        android:id="@+id/tvDraws"
-        android:layout_width="0dp"
+        android:id="@+id/tvWon"
+        android:layout_width="32dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:gravity="center"
-        android:text="0"
+        android:textSize="14sp"
         android:textColor="#000000"
-        android:textSize="12sp" />
+        android:gravity="center"
+        tools:text="2" />
 
     <TextView
-        android:id="@+id/tvLosses"
-        android:layout_width="0dp"
+        android:id="@+id/tvDrawn"
+        android:layout_width="32dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:gravity="center"
-        android:text="0"
+        android:textSize="14sp"
         android:textColor="#000000"
-        android:textSize="12sp" />
+        android:gravity="center"
+        tools:text="1" />
 
-    <LinearLayout
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/tvLost"
+        android:layout_width="32dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.8"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/tvGoalsFor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2"
-            android:textColor="#000000"
-            android:textSize="12sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/"
-            android:textColor="#666666"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/tvGoalsAgainst"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="#000000"
-            android:textSize="12sp" />
-    </LinearLayout>
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        tools:text="0" />
 
     <TextView
         android:id="@+id/tvPoints"
-        android:layout_width="0dp"
+        android:layout_width="32dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:gravity="center"
-        android:text="3"
-        android:textColor="#000000"
         android:textSize="14sp"
-        android:textStyle="bold" />
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:text="7" />
 </LinearLayout>

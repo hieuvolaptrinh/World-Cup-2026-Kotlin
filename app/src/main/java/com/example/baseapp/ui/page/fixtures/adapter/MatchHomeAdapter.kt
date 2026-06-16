@@ -5,15 +5,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.baseapp.databinding.ItemMatchHomeBinding
-import com.example.baseapp.ui.model.MatchUiModel
+import com.example.baseapp.databinding.ItemMatchBinding
+import com.example.baseapp.ui.model.MatchUIModel
+import com.example.baseapp.utils.decodeUnicodeFlag
 
-class MatchHomeAdapter : ListAdapter<MatchUiModel, MatchHomeAdapter.ViewHolder>(DiffCallback()) {
+class MatchHomeAdapter : ListAdapter<MatchUIModel, MatchHomeAdapter.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
-                ItemMatchHomeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemMatchBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
@@ -21,10 +21,10 @@ class MatchHomeAdapter : ListAdapter<MatchUiModel, MatchHomeAdapter.ViewHolder>(
         holder.bind(getItem(position))
     }
 
-    class ViewHolder(private val binding: ItemMatchHomeBinding) :
-            RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private val binding: ItemMatchBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(match: MatchUiModel) {
+        fun bind(match: MatchUIModel) {
             binding.apply {
                 // Date and time
                 tvDate.text = match.matchDate
@@ -32,39 +32,30 @@ class MatchHomeAdapter : ListAdapter<MatchUiModel, MatchHomeAdapter.ViewHolder>(
 
                 // Home team
                 tvHomeTeam.text = match.homeTeamName
-                if (match.homeTeamFlag.isNotEmpty()) {
-                    Glide.with(root.context).load(match.homeTeamFlag).into(ivHomeFlag)
-                }
+                ivHomeFlag.text = match.homeTeamFlag.decodeUnicodeFlag()
 
                 // Away team
                 tvAwayTeam.text = match.awayTeamName
-                if (match.awayTeamFlag.isNotEmpty()) {
-                    Glide.with(root.context).load(match.awayTeamFlag).into(ivAwayFlag)
-                }
+                ivAwayFlag.text = match.awayTeamFlag.decodeUnicodeFlag()
 
                 // Scores
                 tvHomeScore.text = match.homeScore
                 tvAwayScore.text = match.awayScore
 
                 // Status
-                if (match.status == "FT") {
-                    tvStatus.text = "FT"
-                } else if (match.status == "LIVE") {
-                    tvStatus.text = "LIVE"
-                }
-
-                // Stadium
-                tvStadium.text = match.stadium
+                tvStatus.text = if (match.status == "SCHEDULED") "" else match.status
             }
         }
+
+
     }
 
-    class DiffCallback : DiffUtil.ItemCallback<MatchUiModel>() {
-        override fun areItemsTheSame(oldItem: MatchUiModel, newItem: MatchUiModel): Boolean {
+    class DiffCallback : DiffUtil.ItemCallback<MatchUIModel>() {
+        override fun areItemsTheSame(oldItem: MatchUIModel, newItem: MatchUIModel): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: MatchUiModel, newItem: MatchUiModel): Boolean {
+        override fun areContentsTheSame(oldItem: MatchUIModel, newItem: MatchUIModel): Boolean {
             return oldItem == newItem
         }
     }

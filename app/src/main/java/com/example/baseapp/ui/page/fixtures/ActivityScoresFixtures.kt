@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.baseapp.databinding.ActivityScoresFixturesBinding
 
 import com.example.baseapp.ui.base.BaseActivity
-import com.example.baseapp.ui.page.fixtures.adapter.MatchHomeAdapter
+import com.example.baseapp.ui.page.fixtures.adapter.MatchSectionAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -18,7 +18,7 @@ import kotlinx.coroutines.launch
 class ActivityScoresFixtures : BaseActivity<ActivityScoresFixturesBinding>() {
 
     private val viewModel: ScoresFixturesViewModel by viewModels()
-    private val matchAdapter = MatchHomeAdapter()
+    private val sectionAdapter = MatchSectionAdapter()
 
     override fun getViewBinding(layoutInflater: LayoutInflater): ActivityScoresFixturesBinding {
         return ActivityScoresFixturesBinding.inflate(layoutInflater)
@@ -34,7 +34,7 @@ class ActivityScoresFixtures : BaseActivity<ActivityScoresFixturesBinding>() {
             // RecyclerView
             rvMatches.apply {
                 layoutManager = LinearLayoutManager(this@ActivityScoresFixtures)
-                adapter = matchAdapter
+                adapter = sectionAdapter
             }
         }
     }
@@ -45,13 +45,13 @@ class ActivityScoresFixtures : BaseActivity<ActivityScoresFixturesBinding>() {
 
     override fun initObserver() {
         lifecycleScope.launch {
-            viewModel.selectedGroup.collect { group ->
-                group?.let { binding.tvSelectedGroup.text = "${it.name}" }
+            viewModel.selectedFilter.collect { filter ->
+                filter?.let { binding.tvSelectedGroup.text = it }
             }
         }
 
         lifecycleScope.launch {
-            viewModel.matches.collect { matches -> matchAdapter.submitList(matches) }
+            viewModel.sections.collect { sections -> sectionAdapter.submitList(sections) }
         }
 
         lifecycleScope.launch {
@@ -62,16 +62,15 @@ class ActivityScoresFixtures : BaseActivity<ActivityScoresFixturesBinding>() {
     }
 
     private fun showGroupSelectionDialog() {
-        val groups = viewModel.groups.value
-        if (groups.isEmpty()) return
+        val filters = viewModel.filters.value
+        if (filters.isEmpty()) return
 
-        val groupNames = groups.map { it.name }.toTypedArray()
-        val currentGroup = viewModel.selectedGroup.value
+        val currentFilter = viewModel.selectedFilter.value
 
         AlertDialog.Builder(this)
-            .setTitle("Select Group")
-            .setSingleChoiceItems(groupNames, groups.indexOf(currentGroup)) { dialog, which ->
-                viewModel.selectGroup(groups[which])
+            .setTitle("Select Round")
+            .setSingleChoiceItems(filters.toTypedArray(), filters.indexOf(currentFilter)) { dialog, which ->
+                viewModel.selectFilter(filters[which])
                 dialog.dismiss()
             }
             .setNegativeButton("Cancel", null)
